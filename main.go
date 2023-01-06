@@ -9,11 +9,13 @@ import (
 func main() {
 	fmt.Println(models.Db)
 
-	u := &models.User{
-		Name:     "test",
-		Email:    "test@example.com",
-		Password: "testPassword123!",
-	}
+	// u := &models.User{
+	// 	Name:     "test",
+	// 	Email:    "test@example.com",
+	// 	Password: "testPassword123!",
+	// }
+	// fmt.Println(u)
+	// u.CreateUser()
+	u, _ := models.GetUser(1)
 	fmt.Println(u)
-	u.CreateUser()
 }

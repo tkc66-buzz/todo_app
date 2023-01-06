@@ -29,3 +29,20 @@ func (u *User) CreateUser() error {
 	}
 	return err
 }
+
+func GetUser(id int) (User, error) {
+	user := User{}
+	cmd := `
+	select id, uuid, name, email, password, created_at
+	from users where id = ?
+	`
+	err = Db.QueryRow(cmd, id).Scan(
+		&user.ID,
+		&user.UUID,
+		&user.Name,
+		&user.Email,
+		&user.Password,
+		&user.CreatedAt,
+	)
+	return user, err
+}
