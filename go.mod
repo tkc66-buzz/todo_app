@@ -1,4 +1,4 @@
-module github.com/tkc66-buzz
+module github.com/tkc66-buzz/todo_app
 
 go 1.19
 
