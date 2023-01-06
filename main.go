@@ -2,16 +2,10 @@ package main
 
 import (
 	"fmt"
-	"log"
 
-	"github.com/tkc66-buzz/todo_app/config"
+	"github.com/tkc66-buzz/todo_app/app/models"
 )
 
 func main() {
-	fmt.Println(config.Config.Port)
-	fmt.Println(config.Config.SQLDriver)
-	fmt.Println(config.Config.DbName)
-	fmt.Println(config.Config.LogFile)
-
-	log.Println("test")
+	fmt.Println(models.Db)
 }
